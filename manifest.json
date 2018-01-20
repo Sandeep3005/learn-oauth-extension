@@ -1,0 +1,28 @@
+{
+ "manifest_version": 2,
+ "name": "outh-test-2",
+ "short_name": "outh-test-2",
+ "description": "Description for outh-test-2",
+ "version": "1.0",
+ "background": { "scripts": [ "background.js" ], "persistent": true },
+ "content_scripts": [
+  {
+     "run_at": "document_end",
+     "matches": [
+        "https://www.dominos.co.in/",
+        "https://en.wikipedia.org/*"
+      ],
+      "js": [ "content.js" ]
+  }
+ ],
+ "permissions": [
+    "identity"
+ ],
+ "oauth2": {
+    "client_id": "574710815026-blt94u58ie7jqqanuc73b49mdaqrp9j4.apps.googleusercontent.com",
+    "scopes": [
+      "http://www.googleapis.com/auth/drive"
+    ]
+ },
+ "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmRBFelCyG27kHcy38C/bZXggBPDV3JyKnsunJDfHotUG9QQI6Z+KzoeEdCKK/GvQe7AGTNkkr3FUATGmR1b5MbjzTx90qzg6xsrXSU7mqBgJwYPny+PW46pGRwMSz4FEcLO1vUKD9kIhpSzi+0RJv1IwDx6/SNeQzOxXR5B7dWXTKtbiD9f9Rd5yj9Qfy1Q76iIc8P6afpO1DgT960+yZV4+12tCoC+GZILvK3GBwC0vhkeVsIMWaNkIIzC/0PcbLis2HrfZz6iHcetcv4aY6MAIfQWBxaFbDiXXIhXSvi9zO00w/mc9hLxls4fcivXZdEowgEu0UV4+EJuzL35s2wIDAQAB"
+}
